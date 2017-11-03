@@ -33,7 +33,7 @@ using namespace std;
 			inet_pton(AF_INET, ip, &server_addr.sin_addr);
 
 		if (connect(client,(struct sockaddr *)&server_addr, sizeof(server_addr)) == 0)
-		    cout << "=> Coneccion con el servidor... " << inet_ntoa(server_addr.sin_addr) << " with port number: " << portNum << endl;
+			{cout << "=> Coneccion con el servidor... " << inet_ntoa(server_addr.sin_addr) << " with port number: " << portNum << endl;}
 		cout << "=> Esperando confirmacion del servidor" << endl; //line 40
 		recv(client, buffer, bufsize, 0);
 		cout << "=> Coneccion confirmada eres libre de seguir...";
